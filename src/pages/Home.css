@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}

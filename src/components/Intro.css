@@ -1,0 +1,41 @@
+p span {
+  display: block;
+  margin: 50px 0;
+}
+
+.intro__container {
+  gap: 1rem;
+}
+
+.intro__content {
+  grid-template-columns: 1fr 1fr;
+  padding-top: 3.5rem;
+  align-items: center;
+}
+
+@media screen and (max-width: 567px) {
+  .intro__content {
+    grid-template-columns: auto;
+  }
+
+  .intro__content img {
+    margin: auto;
+    display: block;
+    width: calc(100% - 100px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .intro__container {
+    row-gap: 5rem;
+  }
+
+  .intro__content {
+    padding-top: 5.5rem;
+    column-gap: 2rem;
+  }
+
+  .intro__content img {
+    width: 100%;
+  }
+}

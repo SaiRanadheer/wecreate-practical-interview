@@ -1,0 +1,73 @@
+.vd__container {
+  margin: 100px 0;
+}
+
+.vd__content {
+  display: flex;
+}
+
+.vd__content > div {
+  flex: 1 0 50%;
+}
+
+.image {
+  text-align: center;
+}
+
+.vd__content img {
+  width: 50%;
+}
+
+.vd__title {
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.vd__description {
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.vd__misc__title {
+  margin-bottom: 8px;
+}
+
+.vd__misc {
+  display: flex;
+  flex-direction: column;
+}
+
+.vd__misc div {
+  display: flex;
+}
+
+.vd__misc div > p {
+  flex: 1 0 50%;
+  color: #aaa;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .vd__content img {
+    width: 100%;
+  }
+
+  .vd__content > div {
+    flex: 1 0 45%;
+    align-self: center;
+  }
+
+  .text {
+    margin-left: 10px;
+  }
+
+  .image {
+    margin-right: 10px;
+  }
+}

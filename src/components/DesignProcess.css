@@ -1,0 +1,121 @@
+.dp__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.dp__content p {
+  margin: 10px 0;
+}
+
+.circle {
+  display: grid;
+  grid-template-areas: 'layer';
+  place-items: center;
+  border-radius: 50%;
+  border: 2px dashed #46c8e0;
+  margin: 100px 0;
+  --radius: 25vmin;
+  width: calc(2 * var(--radius));
+  height: calc(2 * var(--radius));
+}
+
+.stat {
+  grid-area: layer;
+  width: 10vmin;
+  height: 10vmin;
+
+  display: grid;
+  place-items: center;
+
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+.stat-right {
+  --d: calc(3 / 12);
+  --r-offset: -0.25turn;
+  --r-amount: 1turn;
+  --r: calc((var(--r-amount) * var(--d)) + var(--r-offset));
+  --transform: rotate(var(--r)) translate(var(--radius)) rotate(calc(-1 * var(--r)));
+
+  transform: var(--transform);
+  margin-right: 20px;
+}
+
+.stat-bottom {
+  --d: calc(6 / 12);
+  --r-offset: -0.25turn;
+  --r-amount: 1turn;
+  --r: calc((var(--r-amount) * var(--d)) + var(--r-offset));
+  --transform: rotate(var(--r)) translate(var(--radius)) rotate(calc(-1 * var(--r)));
+
+  transform: var(--transform);
+  margin-bottom: 20px;
+}
+
+.stat-left {
+  --d: calc(9 / 12);
+  --r-offset: -0.25turn;
+  --r-amount: 1turn;
+  --r: calc((var(--r-amount) * var(--d)) + var(--r-offset));
+  --transform: rotate(var(--r)) translate(var(--radius)) rotate(calc(-1 * var(--r)));
+
+  transform: var(--transform);
+  margin-left: -20px;
+}
+
+.stat-top {
+  --d: calc(12 / 12);
+  --r-offset: -0.25turn;
+  --r-amount: 1turn;
+  --r: calc((var(--r-amount) * var(--d)) + var(--r-offset));
+  --transform: rotate(var(--r)) translate(var(--radius)) rotate(calc(-1 * var(--r)));
+
+  transform: var(--transform);
+  margin-top: -20px;
+}
+
+.stat img {
+  width: 48px;
+  height: 48px;
+}
+
+.stat > div {
+  padding: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.stat > div:hover {
+  background-color: #46c8e0;
+}
+
+@media screen and (max-width: 767px) {
+  .stat img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .stat > div {
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  .stat-right {
+    margin-right: 40px;
+  }
+
+  .stat-left {
+    margin-right: 20px;
+  }
+
+  .stat-top,
+  .stat-bottom {
+    margin-right: 40px;
+    margin-top: 10px;
+  }
+}

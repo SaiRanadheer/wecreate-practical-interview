@@ -1,0 +1,52 @@
+.pd__container {
+  background-color: #46c8e0;
+  text-align: center;
+  margin: 0 -100px;
+}
+
+.pd__content {
+  padding: 20px 100px;
+}
+
+.pd__title {
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #fff;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 2rem;
+}
+
+.card {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.active {
+  color: #46c8e0;
+}
+
+@media screen and (max-width: 767px) {
+  .pd__container {
+    margin: 0 -8px;
+    width: calc(100%+16px);
+  }
+
+  .pd__content {
+    padding: 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
